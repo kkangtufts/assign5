@@ -1,0 +1,50 @@
+[
+    {
+        "Title": "I Will Wait",
+        "Artist": "Mumford and Sons",
+        "Year": 2012,
+        "Genres": ["Folk"]
+    },
+    {
+        "Title": "Mr. Perfectly Fine",
+        "Artist": "Taylor Swift",
+        "Year": 2021,
+        "Genres": ["Country"]
+    },
+    {
+        "Title": "Dancing Queen",
+        "Artist": "ABBA",
+        "Year": 1976,
+        "Genres": ["Disco"]
+    },
+    {
+        "Title": "Golden",
+        "Artist": "Huntrix",
+        "Year": 2025,
+        "Genres": ["Kpop", "Soundtrack"]
+    },
+    {
+        "Title": "Viva La Vida",
+        "Artist": "Coldplay",
+        "Year": 2008,
+        "Genres": ["Pop"]
+    },
+    {
+        "Title": "My Heart Will Go On",
+        "Artist": "Celine Dion",
+        "Year": 1997,
+        "Genres": ["Pop", "Soundtrack"]
+    },
+    {
+        "Title": "Kiss from a Rose",
+        "Artist": "Seal",
+        "Year": 1994,
+        "Genres": ["Soul", "Soundtrack"]
+    },
+    {
+        "Title": "I Will Survive",
+        "Artist": "Gloria Gaynor",
+        "Year": 1978,
+        "Genres": ["Disco"]
+    }
+]
