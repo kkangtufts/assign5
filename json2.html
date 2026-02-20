@@ -1,0 +1,31 @@
+<html>
+    <meta http-equiv="refresh">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>Assignment 5 Problem 2</title>
+        <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+        <script>
+            //Fetch the JSON data and present it in HTML
+            jsonData = $.get("https://kkangtufts.github.io/assign5/songs.json",
+                function(data) {
+                    //This is for printing the info into the div
+                    printStr = "";
+                    songNum = 1;
+                    data.forEach(function(song) {
+                        printStr += "<h2>" + songNum + ") " + song.Title + "</h2>";
+                        printStr += "<p>Artist: " + song.Artist + "</p>";
+                        printStr += "<p>Genre: " + song.Genres.join(", ") + "</p>";
+                        printStr += "<p>Released " + song.Year + "</p><br/>";
+                        songNum++;
+                    });
+                    //Print it to the page
+                    document.getElementById("printJson").innerHTML = printStr;
+                    return data;
+                }
+            );
+        </script>
+    </head>
+    <body>
+        <div id="printJson"></div>
+    </body>
+</html>

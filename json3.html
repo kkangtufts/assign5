@@ -1,0 +1,71 @@
+<html>
+    <meta http-equiv="refresh">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>Assignment 5 Problem 3</title>
+        <script src="https://code.jquery.com/jquery-4.0.0.js" integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U=" crossorigin="anonymous"></script>
+        <script>
+            //This will store the genres found
+            genresFound = [];
+            //Fetch the JSON data and present it in HTML
+            jsonData = $.get("https://kkangtufts.github.io/assign5/songs.json",
+                function(data) {
+                    data.forEach(function(song) {
+                        //Go through the list of genres
+                        song.Genres.forEach(function(genre) {
+                            //Go through the current list and see the genre is listed there
+                            genreFound = false;
+                            genresFound.forEach(function(checkGenre){
+                                //Only add if it is not in the array
+                                if (genre == checkGenre) {
+                                    genreFound = true;
+                                }
+                            });
+                            if (!genreFound) {
+                                genresFound.push(genre);
+                            }
+                        });
+                    });
+
+                    //After filling up the genresFound, make options for it
+                    genreStr = "";
+                    genresFound.forEach(function(addGenre) {
+                        genreStr += "<option>" + addGenre + "</option>";
+                    });
+
+                    //Add it to the drop down list
+                    document.getElementById("genreList").innerHTML = genreStr;
+                }
+            );
+
+            function filterGenre() {
+                //Get the selected genre
+                selGenre = document.getElementById("genreList").value;
+                //Clear the previous results
+                document.getElementById("result").innerHTML = "";
+
+                jsonData = $.get("https://kkangtufts.github.io/assign5/songs.json",
+                function(data) {
+                    resultStr = "";
+                    songCount = 1;
+                    data.forEach(function(song) {
+                        //Go through the list of genres
+                        song.Genres.forEach(function(genre) {
+                            //If the genre matches, then show it
+                            if (genre == selGenre) {
+                                resultStr += "<h2>" + songCount + ") " + song.Title + "</h2>";
+                                songCount++;
+                            }
+                        });
+                    });
+                    document.getElementById("result").innerHTML = resultStr;
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <select id="genreList"></select>
+        <button onclick="filterGenre()">Filter</button>
+        <div id="result"></div>
+    </body>
+</html>
