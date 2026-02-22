@@ -9,19 +9,19 @@
         "Title": "Mr. Perfectly Fine",
         "Artist": "Taylor Swift",
         "Year": 2021,
-        "Genres": ["Country"]
+        "Genres": ["Country", "Pop"]
     },
     {
         "Title": "Dancing Queen",
         "Artist": "ABBA",
         "Year": 1976,
-        "Genres": ["Disco"]
+        "Genres": ["Disco", "Pop"]
     },
     {
         "Title": "Golden",
         "Artist": "Huntrix",
         "Year": 2025,
-        "Genres": ["Kpop", "Soundtrack"]
+        "Genres": ["Kpop"]
     },
     {
         "Title": "Viva La Vida",
@@ -33,18 +33,30 @@
         "Title": "My Heart Will Go On",
         "Artist": "Celine Dion",
         "Year": 1997,
-        "Genres": ["Pop", "Soundtrack"]
+        "Genres": ["Pop"]
     },
     {
         "Title": "Kiss from a Rose",
         "Artist": "Seal",
         "Year": 1994,
-        "Genres": ["Soul", "Soundtrack"]
+        "Genres": ["Soul", "Rock"]
     },
     {
         "Title": "I Will Survive",
         "Artist": "Gloria Gaynor",
         "Year": 1978,
         "Genres": ["Disco"]
+    },
+    {
+        "Title": "Georgia on My Mind",
+        "Artist": "Ray Charles",
+        "Year": 1960,
+        "Genres": ["Soul", "Country"]
+    },
+    {
+        "Title": "Set Fire to the Rain",
+        "Artist": "Adele",
+        "Year": 1960,
+        "Genres": ["Soul", "Pop"]
     }
 ]
